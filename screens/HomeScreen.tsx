@@ -1,10 +1,13 @@
 import React from 'react';
 
 import {StyleSheet, Button} from 'react-native';
+import {Hello, Hello2} from '../components';
 
 const HomeScreen = ({navigation}) => {
   return (
     <>
+      <Hello />
+      <Hello2 />
       <Button
         title="Go to WelcomeScreen"
         onPress={() => navigation.navigate('Welcome', {name: 'Jane'})}

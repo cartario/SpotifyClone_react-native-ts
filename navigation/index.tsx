@@ -1,23 +1,22 @@
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
+import {
+  NavigationContainer,
+  DefaultTheme,
+  DarkTheme,
+} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import WelcomeApp from '../screens/Welcome';
-import TestPage from '../screens/Test';
 import NotFoundScreen from '../screens/NotFoundScreen';
-import HomeScreen from '../screens/HomeScreen';
 import BottomTabNavigator from './BottomTabNavigator';
-
+import {useColorScheme} from 'react-native';
 
 const Stack = createNativeStackNavigator();
 
 const MainNavigation = () => {
+  const isLightTheme = useColorScheme() === 'light';
   return (
-    <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen
-          name="Root"
-          component={BottomTabNavigator}          
-        />        
+    <NavigationContainer theme={!isLightTheme ? DefaultTheme : DarkTheme}>
+      <Stack.Navigator screenOptions={{headerShown: false}}>
+        <Stack.Screen name="Root" component={BottomTabNavigator} />
         <Stack.Screen name="NotFound" component={NotFoundScreen} />
       </Stack.Navigator>
     </NavigationContainer>
