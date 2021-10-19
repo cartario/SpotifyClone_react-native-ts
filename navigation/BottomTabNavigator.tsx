@@ -48,6 +48,7 @@ const BottomTabNavigator = () => {
             options={{
               tabBarIcon: icon,
             }}
+            key={key}
           />
         );
       })}

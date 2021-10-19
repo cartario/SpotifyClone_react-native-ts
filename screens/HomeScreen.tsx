@@ -1,13 +1,16 @@
 import React from 'react';
-
-import {StyleSheet, Button} from 'react-native';
-import {Hello, Hello2} from '../components';
+import {Button, ScrollView} from 'react-native';
+import {Album} from '../components';
+import {AlbumsMock} from '../mock';
 
 const HomeScreen = ({navigation}) => {
   return (
     <>
-      <Hello />
-      <Hello2 />
+      <ScrollView horizontal>
+        {AlbumsMock.map(each => (
+          <Album album={each} key={each.albumId} />
+        ))}
+      </ScrollView>
       <Button
         title="Go to WelcomeScreen"
         onPress={() => navigation.navigate('Welcome', {name: 'Jane'})}
@@ -23,24 +26,5 @@ const HomeScreen = ({navigation}) => {
     </>
   );
 };
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
 
 export default HomeScreen;
