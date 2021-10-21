@@ -4,10 +4,10 @@ export default StyleSheet.create({
   root: {
     overflow: 'hidden',
     width: 160,
-    maxHeight: 220,
+    maxHeight: 230,
     margin: 10,
     borderRadius: 10,
-    borderColor: 'white',
+    // borderColor: 'white',
     borderWidth:1,
   },
   poster: {
@@ -16,7 +16,8 @@ export default StyleSheet.create({
     borderRadius: 3,
   },
   artistHeadline: {
-    marginTop: 15,
+    marginTop: 0,
+    padding: 10,
     color: 'grey',
     fontWeight: 'bold'
   },

@@ -20,4 +20,11 @@ export const AlbumsMock = [
     albumUrl: 'https://yobte.ru/uploads/posts/2019-11/znojnye-devushki-140-foto-39.jpg',
     artistHeadline: 'Eminem, Tailor Swift, Kristina Agilerra',
   }
-]
+];
+
+export const albumsCategoryMock = {
+  id: '1',
+  title: 'Recently played',
+  albums: AlbumsMock,
+};
+

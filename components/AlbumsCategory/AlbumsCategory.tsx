@@ -1,0 +1,19 @@
+import React from 'react';
+import {View, Text, ScrollView} from 'react-native';
+import type {Node} from 'react-native';
+import styles from './styles';
+import {Album} from '../../components';
+import {AlbumsCategoryProps} from '../../types';
+
+export default ({albums, title}: AlbumsCategoryProps): Node => {
+  return (
+    <View style={styles.root}>
+      <Text style={styles.title}>{title}</Text>
+      <ScrollView horizontal>
+        {albums.map(album => (
+          <Album {...album} key={album.albumId} />
+        ))}
+      </ScrollView>
+    </View>
+  );
+};

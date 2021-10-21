@@ -1,16 +1,13 @@
 import React from 'react';
-import {Button, ScrollView} from 'react-native';
-import {Album} from '../components';
-import {AlbumsMock} from '../mock';
+import {Button} from 'react-native';
+import {AlbumsCategory} from '../components';
+import {albumsCategoryMock} from '../mock';
 
 const HomeScreen = ({navigation}) => {
   return (
     <>
-      <ScrollView horizontal>
-        {AlbumsMock.map(each => (
-          <Album album={each} key={each.albumId} />
-        ))}
-      </ScrollView>
+      <AlbumsCategory {...albumsCategoryMock} />
+
       <Button
         title="Go to WelcomeScreen"
         onPress={() => navigation.navigate('Welcome', {name: 'Jane'})}
