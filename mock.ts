@@ -28,3 +28,20 @@ export const albumsCategoryMock = {
   albums: AlbumsMock,
 };
 
+export const albumsCategorysMock = [{
+    id: '1',
+    title: 'Recently played1',
+    albums: AlbumsMock,
+  },
+  {
+    id: '2',
+    title: 'Recently played2',
+    albums: AlbumsMock,
+  },
+  {
+    id: '3',
+    title: 'Recently played3',
+    albums: AlbumsMock,
+  }, 
+]
+

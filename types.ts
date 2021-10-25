@@ -9,3 +9,5 @@ export type AlbumsCategoryProps = {
   title: string,
   albums: Array<AlbumProps>,
 }
+
+export type AlbumsCategoriesProps = AlbumsCategoryProps[];

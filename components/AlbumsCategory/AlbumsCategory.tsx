@@ -5,7 +5,7 @@ import styles from './styles';
 import {Album} from '../../components';
 import {AlbumsCategoryProps} from '../../types';
 
-export default ({albums, title}: AlbumsCategoryProps): Node => {
+export default ({albums, title, id}: AlbumsCategoryProps): Node => {
   return (
     <View style={styles.root}>
       <Text style={styles.title}>{title}</Text>
