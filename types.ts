@@ -1,7 +1,16 @@
+export type SongProps = {
+  id: Number,
+  artist: string,
+  songName: string,
+  imageUri: string,
+}
+
 export type AlbumProps = {  
   albumId: string;
   albumUrl: string;
   artistHeadline: string;
+  likes: Number;
+  songs: Array<SongProps>
 };
 
 export type AlbumsCategoryProps = {  
