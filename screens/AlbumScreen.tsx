@@ -3,7 +3,7 @@ import type {Node} from 'react';
 import {ScrollView, View} from 'react-native';
 
 import {useRoute} from '@react-navigation/native';
-import {SongListItem} from '../components';
+import {SongListItem, AlbumHeader} from '../components';
 import {Album} from '../mock';
 
 const AlbumsScreen = () => {
@@ -11,10 +11,15 @@ const AlbumsScreen = () => {
     params: {id},
   } = useRoute();
 
-  const {songs} = Album;
+  const {songs, albumUrl, artistHeadline, likes} = Album;
 
   return (
     <View>
+      <AlbumHeader
+        albumUrl={albumUrl}
+        artistHeadline={artistHeadline}
+        likes={likes}
+      />
       <ScrollView>
         {songs.map(song => (
           <SongListItem {...song} />

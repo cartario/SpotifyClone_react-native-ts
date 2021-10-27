@@ -5,19 +5,19 @@ export const Album = {
   likes: 34,
   songs: [
     {
-      id:1,
+      id: 1,
       artist: 'Eminem',
       songName: 'Without me1',
       imageUri: 'https://yobte.ru/uploads/posts/2019-11/znojnye-devushki-140-foto-39.jpg',
     },
     {
-      id:2,
+      id: 2,
       artist: 'Eminem',
       songName: 'Without me2',
       imageUri: 'https://yobte.ru/uploads/posts/2019-11/znojnye-devushki-140-foto-39.jpg',
     },
     {
-      id:3,
+      id: 3,
       artist: 'Eminem',
       songName: 'Without me3',
       imageUri: 'https://yobte.ru/uploads/posts/2019-11/znojnye-devushki-140-foto-39.jpg',
