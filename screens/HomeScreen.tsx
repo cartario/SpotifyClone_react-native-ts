@@ -12,7 +12,7 @@ const HomeScreen = ({navigation}: AlbumsCategoriesProps) => {
           <AlbumsCategory {...each} key={each.id} />
         ))}
       </ScrollView>
-      <Button
+      {/* <Button
         title="Go to WelcomeScreen"
         onPress={() => navigation.navigate('Welcome', {name: 'Jane'})}
       />
@@ -23,7 +23,7 @@ const HomeScreen = ({navigation}: AlbumsCategoriesProps) => {
       <Button
         title="Go to NotFoundScreen"
         onPress={() => navigation.navigate('NotFound', {name: 'Jane'})}
-      />
+      /> */}
     </>
   );
 };

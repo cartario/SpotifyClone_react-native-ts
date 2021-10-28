@@ -28,7 +28,7 @@ export default StyleSheet.create({
     alignItems: 'center',
     width: '60%',
     padding: 10,    
-    backgroundColor: '#6eb51b',
+    backgroundColor: '#1cd05d',
     borderRadius: 50,
   },
   btnText: {
