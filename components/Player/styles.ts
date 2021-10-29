@@ -21,8 +21,7 @@ export default StyleSheet.create({
     marginLeft: 15,
     color: '#fff',    
   },
-  artist: {
-    
+  artist: {    
     fontSize: 14,
     fontWeight: 'bold',
     color: '#fff',
