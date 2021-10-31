@@ -4,7 +4,10 @@ export default StyleSheet.create({
   root: { 
     position: 'absolute',
     bottom: 85,      
-    flexDirection: 'row',  
+    width: '100%',    
+  },
+  container:{
+    flexDirection: 'row',
     justifyContent: 'space-between',    
     width: '100%', 
     height: 70,    
@@ -36,5 +39,9 @@ export default StyleSheet.create({
     justifyContent: 'space-around',
     alignItems: 'center',
     width: '25%',    
+  },
+  progress:{
+    height: 3,    
+    backgroundColor: 'grey',
   }
 })
