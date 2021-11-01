@@ -38,20 +38,19 @@ export default ({imageUri, artist, songName}: SongProps): Node => {
   }, []);
 
   useEffect(() => {
-    if (audio !== null) {
-      const timer = setInterval(() => {
-        return audio.getCurrentTime(currentTime => {
-          console.log({
-            currentTime,
-            dur: audio.getDuration(),
-            progress: (100 * currentTime) / audio.getDuration(),
-          });
-          return setProgress((100 * currentTime) / audio.getDuration());
-        });
-      }, 200);
-
-      return () => clearInterval(timer);
-    }
+    // if (audio !== null) {
+    //   const timer = setInterval(() => {
+    //     return audio.getCurrentTime(currentTime => {
+    //       console.log({
+    //         currentTime,
+    //         dur: audio.getDuration(),
+    //         progress: (100 * currentTime) / audio.getDuration(),
+    //       });
+    //       return setProgress((100 * currentTime) / audio.getDuration());
+    //     });
+    //   }, 200);
+    //   return () => clearInterval(timer);
+    // }
   }, []);
 
   const playPause = () => {
