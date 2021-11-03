@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Button, ScrollView} from 'react-native';
 import {AlbumsCategory} from '../components';
 import {albumsCategorysMock} from '../mock';
@@ -7,11 +7,12 @@ import {API, graphqlOperation} from 'aws-amplify';
 import {listAlbumCategorys} from '../src/graphql/queries';
 
 const HomeScreen = ({navigation}: AlbumsCategoriesProps) => {
+  const [categories, setCategories] = useState(null);
   useEffect(() => {
     const fetchAlbumCategories = async () => {
       try {
         const {data} = await API.graphql(graphqlOperation(listAlbumCategorys));
-        console.log(data.listAlbumCategorys.items.map(each => each.title));
+        setCategories(data.listAlbumCategorys.items);
       } catch (e) {
         console.log(e);
       }
@@ -20,11 +21,15 @@ const HomeScreen = ({navigation}: AlbumsCategoriesProps) => {
     fetchAlbumCategories();
   }, []);
 
+  if (!categories) {
+    return null;
+  }
+
   return (
     <>
       <ScrollView>
-        {albumsCategorysMock.map(each => (
-          <AlbumsCategory {...each} key={each.id} />
+        {Object.keys(categories).map(each => (
+          <AlbumsCategory {...categories[each]} key={each} />
         ))}
       </ScrollView>
       {/* <Button

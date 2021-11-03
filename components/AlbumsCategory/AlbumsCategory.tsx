@@ -10,8 +10,8 @@ export default ({albums, title, id}: AlbumsCategoryProps): Node => {
     <View style={styles.root}>
       <Text style={styles.title}>{title}</Text>
       <ScrollView horizontal>
-        {albums.map(album => (
-          <Album {...album} key={album.albumId} />
+        {albums.items.map(album => (
+          <Album {...album} key={album.id} />
         ))}
       </ScrollView>
     </View>
