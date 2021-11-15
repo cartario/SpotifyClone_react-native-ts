@@ -12,24 +12,25 @@ const HomeScreen = ({navigation}: AlbumsCategoriesProps) => {
     const fetchAlbumCategories = async () => {
       try {
         const {data} = await API.graphql(graphqlOperation(listAlbumCategorys));
+
         setCategories(data.listAlbumCategorys.items);
       } catch (e) {
         console.log(e);
       }
     };
 
-    fetchAlbumCategories();
+    // fetchAlbumCategories();
   }, []);
 
-  if (!categories) {
-    return null;
-  }
+  // if (!categories) {
+  //   return null;
+  // }
 
   return (
     <>
       <ScrollView>
-        {Object.keys(categories).map(each => (
-          <AlbumsCategory {...categories[each]} key={each} />
+        {Object.keys(albumsCategorysMock).map(each => (
+          <AlbumsCategory {...albumsCategorysMock[each]} key={each} />
         ))}
       </ScrollView>
       {/* <Button

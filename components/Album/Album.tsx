@@ -5,11 +5,7 @@ import styles from './styles';
 import {AlbumProps} from '../../types';
 import {useNavigation} from '@react-navigation/native';
 
-export default ({
-  imageUrl: albumUrl,
-  headline: artistHeadline,
-  id: albumId,
-}: AlbumProps): Node => {
+export default ({albumUrl, artistHeadline, albumId}: AlbumProps): Node => {
   const navigation = useNavigation();
 
   const onPress = () => {
