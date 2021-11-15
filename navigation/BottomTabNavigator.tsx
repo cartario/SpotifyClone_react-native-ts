@@ -2,6 +2,7 @@ import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import WelcomeApp from '../screens/Welcome';
 import TestPage from '../screens/Test';
+import AnimationPage from '../screens/AnimationTest';
 import TabHomeNavigator from './TabHomeNavigator';
 import IoniconsIcon from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -23,7 +24,7 @@ const screens = {
     ),
   },
   library: {
-    component: TestPage,
+    component: AnimationPage,
     icon: ({color, size}) => (
       <MaterialIcons name="my-library-music" color={color} size={size} />
     ),
